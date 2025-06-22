@@ -7,6 +7,7 @@ A fun Telegram bot that tells random jokes using the Official Joke API.
 - Responds to `/joke` command with random jokes
 - Uses Official Joke API to fetch jokes
 - Easy to set up and run
+- Deployable to Vercel
 
 ## Setup
 
@@ -19,9 +20,24 @@ A fun Telegram bot that tells random jokes using the Official Joke API.
    ```
    TELEGRAM_TOKEN=your_bot_token_here
    ```
-4. Run the bot:
+
+## Deployment to Vercel
+
+1. Install Vercel CLI:
+
    ```bash
-   node index.js
+   npm i -g vercel
+   ```
+
+2. Deploy to Vercel:
+
+   ```bash
+   vercel
+   ```
+
+3. After deployment, get your Vercel deployment URL and set up the webhook with Telegram:
+   ```
+   https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=<YOUR_VERCEL_URL>/api/webhook
    ```
 
 ## Commands
@@ -34,3 +50,4 @@ A fun Telegram bot that tells random jokes using the Official Joke API.
 - node-telegram-bot-api
 - axios
 - dotenv
+- Vercel Serverless Functions
